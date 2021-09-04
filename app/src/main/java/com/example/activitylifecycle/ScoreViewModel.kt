@@ -5,9 +5,8 @@ import androidx.lifecycle.ViewModel
 class ScoreViewModel : ViewModel() {
     var number : Int = 1
 
-    fun addOne():String {
+    fun addOne() {
         number += 1
-        return number.toString()
     }
 
 }
