@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var question : EditText
     private lateinit var send : Button
     private lateinit var show : Button
+    private lateinit var questionStr : String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,9 +24,11 @@ class MainActivity : AppCompatActivity() {
         send = findViewById(R.id.Send)
         show = findViewById(R.id.Show)
 
-        send.setOnClickListener {
 
+        send.setOnClickListener {
+            questionStr = question.text.toString()
             val intent  = Intent(this,ChildActivity::class.java)
+            intent.putExtra("Question",questionStr)
             startActivity(intent)
         }
 

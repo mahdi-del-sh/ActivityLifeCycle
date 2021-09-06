@@ -23,7 +23,7 @@ class ChildActivity : AppCompatActivity() {
         send       = findViewById(R.id.ChildSend)
 
         show.setOnClickListener {
-
+            question.text = intent.getStringExtra("Question")
         }
 
         send.setOnClickListener {
