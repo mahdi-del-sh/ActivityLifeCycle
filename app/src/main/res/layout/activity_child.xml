@@ -30,7 +30,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Answer"
+        android:hint="Enter Your Answer"
         android:textAlignment="center" />
 
     <Button

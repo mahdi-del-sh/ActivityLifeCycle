@@ -23,11 +23,14 @@ class ChildActivity : AppCompatActivity() {
         send       = findViewById(R.id.ChildSend)
 
         show.setOnClickListener {
-            question.text = intent.getStringExtra("Question")
+            question.text = intent.getStringExtra("question")
         }
 
         send.setOnClickListener {
-
+            val intent = Intent()
+            intent.putExtra("answer",answer.text.toString())
+            setResult(RESULT_OK, intent)
+            finish()
         }
 
     }
